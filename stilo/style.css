@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root /* elemento especificação - variação */ {
+    --fonte1: verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3:'Roboto', sans-serif;
+
+}
+
+* {
+   margin: 0px;
+   padding: 0px;
+   font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgrey;
+    font-family: var(--fonte1);
+    font-size: 1em;
+    
+
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* as primeiras letras do paragrafos serão maiusculas */
+   font-family: var(--fonte2);
+   font-size: 10vw;
+
+}
+
+header > p {
+    padding-bottom: 50px;
+    
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none; /* sem ficar sublinhado */
+    font-weight: bolder; /* negrito */
+}
+
+header a:hover, footer a:hover /* seletor */ {
+    text-decoration: underline; /* fica sublinhado quando passado o mouse em cima */
+}
+
+section /* espaços entre os paragrafos */ {
+    padding-top: 10vh;
+    padding-bottom: 10vh; /* vh usado para altura -  */
+    line-height: 2em; /* espaçamento entre as linhas  */
+    padding-left: 30px;/* espaçamento de paragrafo  */
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /* vai aumentando depedendo do tamanho da tela (viewport) */
+}
+
+section.normal /* usa quando aplicado na class */ 
+{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+}
+
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.555);
+    background-size: cover; 
+    background-attachment: fixed; /* efeito parallax (texto rolando e imagem estática) */
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.493);
+    text-shadow: 1px 1px 0px;
+    
+}
+
+section#img1 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+    
+}
+
+section#img2 {
+    background-image: url(../imagens/background002.jpg);
+    
+}
+
+footer {
+     background-color: black;
+     color: white;
+     text-align: center;
+     padding: 10px;
+}
